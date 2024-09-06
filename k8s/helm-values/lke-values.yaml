@@ -1,0 +1,12 @@
+image:
+  repository: ghcr.io/rmortale/k8scc-config-server
+  tag: b142529b0262cd1a663c475c205d61fc314c4ad4
+
+containerPort: 8080
+
+vars:
+  #SPRING_PROFILES_ACTIVE: dev
+  SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/rmortale/spring-config-repo
+  SPRING_CLOUD_CONFIG_SERVER_GIT_CLONEONSTART: true
+  LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
+  K8SCC_ENV: PROD

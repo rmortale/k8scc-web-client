@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lke-config-server-prod
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: lke-config-server-app
+    environment: PROD
+spec:
+  project: default
+  destination:
+    server: https://bb6ff00d-c3ef-4206-ae4b-c07c036775b1.eu-central-1.linodelke.net:443
+    namespace: k8scc
+  sources:
+    - chart: onechart
+      repoURL: https://chart.onechart.dev
+      targetRevision: 0.70.0
+      helm:
+        valueFiles:
+        - $values/k8s/helm-values/lke-values.yaml
+
+    - repoURL: https://github.com/rmortale/k8scc-config-server.git
+      ref: values
+      targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true 
+        
+      
