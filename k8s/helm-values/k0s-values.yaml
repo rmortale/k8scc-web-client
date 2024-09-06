@@ -3,15 +3,11 @@ image:
   tag: b142529b0262cd1a663c475c205d61fc314c4ad4
 
 containerPort: 8080
+secretEnabled: true
 
 vars:
   SPRING_PROFILES_ACTIVE: devt
+  SPRING_CONFIG_IMPORT: configserver:http://${CFG_USER}:${CFG_PASS}@k0s-config-server-devt:8080
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
   K8SCC_ENV: DEVT
 
-
-#  spring.cloud.config.server.git.uri=https://github.com/rmortale/spring-config-repo
-#  spring.cloud.config.server.git.clone-on-start=true
-#  spring.security.user.name=root
-#  spring.security.user.password=secret
-#  logging.level.org.springframework.cloud.config.server=TRACE
