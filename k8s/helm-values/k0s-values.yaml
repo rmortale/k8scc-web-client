@@ -12,8 +12,10 @@ vars:
   K8SCC_ENV: DEVT
 
 
-#  spring.cloud.config.server.git.uri=https://github.com/rmortale/spring-config-repo
-#  spring.cloud.config.server.git.clone-on-start=true
-#  spring.security.user.name=root
-#  spring.security.user.password=secret
-#  logging.level.org.springframework.cloud.config.server=TRACE
+resources:
+  limits:
+    cpu: "500m"
+    memory: "1000Mi"
+  requests:
+    cpu: "200m"
+    memory: "500Mi"
