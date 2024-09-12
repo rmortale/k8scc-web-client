@@ -11,8 +11,6 @@ ingress:
   host: webclient
 
 vars:
-  SPRING_PROFILES_ACTIVE: devt
-  SPRING_CONFIG_IMPORT: configserver:http://${CFG_USER}:${CFG_PASS}@k0s-config-server-devt:8080
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
   K8SCC_ENV: DEVT
 
