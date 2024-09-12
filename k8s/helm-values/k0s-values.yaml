@@ -8,7 +8,7 @@ secretEnabled: true
 ingress:
   annotations:
     kubernetes.io/ingress.class: nginx
-  host: web-client.example.com
+  host: webclient
 
 vars:
   SPRING_PROFILES_ACTIVE: devt
