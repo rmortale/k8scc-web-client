@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: do-config-server-acpt
+  name: do-web-client-acpt
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
-    name: do-config-server-app
+    name: do-web-client-app
     environment: ACPT
 spec:
   project: default
