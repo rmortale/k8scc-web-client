@@ -21,7 +21,7 @@ spec:
         valueFiles:
           - $values/k8s/helm-values/do-values.yaml
 
-    - repoURL: https://github.com/rmortale/k8scc-config-server.git
+    - repoURL: https://github.com/rmortale/k8scc-web-client.git
       ref: values
       targetRevision: main
   syncPolicy:

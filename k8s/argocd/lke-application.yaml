@@ -19,9 +19,9 @@ spec:
       targetRevision: 0.70.0
       helm:
         valueFiles:
-        - $values/k8s/helm-values/lke-values.yaml
+          - $values/k8s/helm-values/lke-values.yaml
 
-    - repoURL: https://github.com/rmortale/k8scc-config-server.git
+    - repoURL: https://github.com/rmortale/k8scc-web-client.git
       ref: values
       targetRevision: main
   syncPolicy:

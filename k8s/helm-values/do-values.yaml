@@ -1,12 +1,10 @@
 image:
-  repository: ghcr.io/rmortale/k8scc-config-server
+  repository: ghcr.io/rmortale/k8scc-web-client
   tag: 64a07aa01a14dcf4a765ab529bf556f269da19f4
 
 containerPort: 8080
+secretEnabled: true
 
 vars:
-  #SPRING_PROFILES_ACTIVE: dev
-  SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/rmortale/spring-config-repo
-  SPRING_CLOUD_CONFIG_SERVER_GIT_CLONEONSTART: true
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
   K8SCC_ENV: ACPT
