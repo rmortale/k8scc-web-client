@@ -1,0 +1,25 @@
+image:
+  repository: ghcr.io/rmortale/k8scc-web-client
+  tag: a599d1dff4998add5833968786c9c55339d8a36f
+
+containerPort: 8080
+
+
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  host: prwebclient
+
+vars:
+  LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
+  K8SCC_ENV: DEVT
+
+
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "1000Mi"
+  requests:
+    cpu: "200m"
+    memory: "500Mi"
