@@ -3,7 +3,7 @@ image:
   tag: 72d52f7a5307866985dcc9b8fbd5a4f7fe401edc
 
 containerPort: 8080
-secretEnabled: true
+
 
 ingress:
   annotations:
