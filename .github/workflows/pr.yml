@@ -60,7 +60,7 @@ jobs:
           echo "checkout source branch"
           git checkout ${{ github.event.pull_request.head.ref }}
           echo "updating image tag in values file"
-          sed -i "s,tag:.*,tag:\ ${{ github.event.pull_request.head.sha }}," k8s/helm-values/k0-values-pr.yaml
+          sed -i "s,tag:.*,tag:\ ${{ github.event.pull_request.head.sha }}," k8s/helm-values/k0s-values-pr.yaml
           git add . && git commit -m "update pr image tag [skip ci]"
           git push
 
