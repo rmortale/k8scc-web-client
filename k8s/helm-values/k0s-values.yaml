@@ -11,10 +11,19 @@ ingress:
   host: webclient
 
 vars:
+  SPRING_PROFILES: devt
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
   K8SCC_ENV: DEVT
 
-
+fileSecrets:
+  - name: devt-properties
+    path: /config
+    secrets:
+      application-devt.yaml: |
+        debug: true
+        spring:
+          main:
+            banner-mode: off
 
 resources:
   limits:

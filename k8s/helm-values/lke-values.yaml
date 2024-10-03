@@ -8,4 +8,15 @@ secretEnabled: true
 
 vars:
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
-  K8SCC_ENV: PROD
+  K8SCC_ENV: ACPT
+  SPRING_PROFILES: acpt
+
+fileSecrets:
+  - name: acpt-properties
+    path: /config
+    secrets:
+      application-acpt.yaml: |
+        debug: false
+        spring:
+          main:
+            banner-mode: on
