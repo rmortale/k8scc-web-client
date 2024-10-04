@@ -38,7 +38,5 @@ volumes:
     fileName: application-devt.yaml
     fileContent: |
       debug: false
-      spring:
-        main:
-          banner-mode: on
+      
 
