@@ -9,7 +9,7 @@ secretEnabled: true
 vars:
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
   K8SCC_ENV: ACPT
-  SPRING_PROFILES: acpt
+  SPRING_PROFILES_ACTIVE: acpt
 
 fileSecrets:
   - name: acpt-properties

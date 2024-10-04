@@ -11,7 +11,7 @@ ingress:
   host: webclient
 
 vars:
-  SPRING_PROFILES: devt
+  SPRING_PROFILES_ACTIVE: devt
   LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB: DEBUG
   K8SCC_ENV: DEVT
 
