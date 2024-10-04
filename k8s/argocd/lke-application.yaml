@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: lke-web-client-prod
+  name: lke-web-client-acpt
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
     name: lke-web-client-app
-    environment: PROD
+    environment: ACPT
 spec:
   project: default
   destination:
@@ -16,7 +16,7 @@ spec:
   sources:
     - chart: onechart
       repoURL: https://chart.onechart.dev
-      targetRevision: 0.70.0
+      targetRevision: 0.71.0
       helm:
         valueFiles:
           - $values/k8s/helm-values/lke-values.yaml
@@ -25,6 +25,9 @@ spec:
       ref: values
       targetRevision: main
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true 
