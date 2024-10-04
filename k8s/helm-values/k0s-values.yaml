@@ -20,7 +20,7 @@ fileSecrets:
     path: /config
     secrets:
       application-devt.yaml: |
-        debug: true
+        debug: false
         spring:
           main:
             banner-mode: off
