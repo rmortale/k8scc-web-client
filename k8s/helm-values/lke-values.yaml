@@ -10,6 +10,14 @@ vars:
   K8SCC_ENV: ACPT
   SPRING_PROFILES_ACTIVE: acpt
 
+resources:
+  limits:
+    cpu: "500m"
+    memory: "1000Mi"
+  requests:
+    cpu: "200m"
+    memory: "500Mi"
+    
 volumes:
   - name: props
     path: /config
