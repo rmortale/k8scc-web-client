@@ -14,15 +14,15 @@ vars:
   SPRING_PROFILES_ACTIVE: devt
   K8SCC_ENV: DEVT
 
-fileSecrets:
-  - name: devt-properties
-    path: /config2
-    secrets:
-      application-devt.yaml: |
-        debug: false
-        spring:
-          main:
-            banner-mode: off
+#fileSecrets:
+#  - name: devt-properties
+#    path: /config2
+#    secrets:
+#      application-devt.yaml: |
+#        debug: false
+#        spring:
+#          main:
+#            banner-mode: off
 
 resources:
   limits:
