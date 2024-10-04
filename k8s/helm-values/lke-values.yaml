@@ -4,7 +4,7 @@ image:
 
 replicas: 3
 containerPort: 8080
-secretEnabled: true
+
 
 vars:
   K8SCC_ENV: ACPT
