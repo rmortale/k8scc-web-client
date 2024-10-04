@@ -16,7 +16,7 @@ vars:
 
 fileSecrets:
   - name: devt-properties
-    path: /config
+    path: /config2
     secrets:
       application-devt.yaml: |
         debug: false
@@ -31,3 +31,14 @@ resources:
   requests:
     cpu: "200m"
     memory: "500Mi"
+
+volumes:
+  - name: props
+    path: /config
+    fileName: application-devt.yaml
+    fileContent: |
+      debug: false
+      spring:
+        main:
+          banner-mode: on
+
