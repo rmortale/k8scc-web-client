@@ -23,10 +23,9 @@ resources:
     memory: "500Mi"
 
 volumes:
-  - name: props
+  - name: propstest
     path: /config
     fileName: application-test.yaml
     fileContent: |
-      debug: true
-      
-
+      app:
+        greeting: Hello from TEST env

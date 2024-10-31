@@ -1,0 +1,6 @@
+logging:
+  level:
+    org.springframework.boot.context.config: INFO
+
+app:
+  greeting: Hello from TEST env

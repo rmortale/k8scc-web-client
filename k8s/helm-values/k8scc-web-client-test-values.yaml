@@ -5,13 +5,8 @@ image:
 containerPort: 8080
 secretEnabled: false
 
-ingress:
-  annotations:
-    kubernetes.io/ingress.class: nginx
-  host: webclient
-
 vars:
-  SPRING_PROFILES_ACTIVE: devt
+  SPRING_PROFILES_ACTIVE: test
   K8SCC_ENV: DEVT
 
 resources:
@@ -22,11 +17,5 @@ resources:
     cpu: "200m"
     memory: "500Mi"
 
-volumes:
-  - name: props
-    path: /config
-    fileName: application-devt.yaml
-    fileContent: |
-      debug: false
       
 

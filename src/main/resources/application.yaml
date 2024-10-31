@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: k8scc-web-client
+
+logging:
+  level:
+    org.springframework.boot.context.config: TRACE
+
+app:
+  prefix: DEFAULT-
+  greeting: Hello from default env
