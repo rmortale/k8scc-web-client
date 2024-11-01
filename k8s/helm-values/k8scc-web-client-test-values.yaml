@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/rmortale/k8scc-web-client
-  tag: c67db0ae3ec5aa364b9c42b6e79ae0a91d1575c5
+  tag: c9c3945951d5c81d0f2e1c6b064607e44e0b8641
 
 containerPort: 8080
 secretEnabled: false
