@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: k8scc-web-client-apps
+  namespace: argocd
+spec:
+  generators:
+    - clusters: { }
+  template:
+    metadata:
+      name: '{{name}}-k8scc-web-client'
+      namespace: argocd
+    spec:
+      project: default
+      sources:
+        - chart: onechart
+          repoURL: https://chart.onechart.dev
+          targetRevision: 0.73.0
+          helm:
+            valueFiles:
+              - '$values/k8s/helm-values/{{name}}-values.yaml'
+
+        - repoURL: https://github.com/rmortale/k8scc-web-client.git
+          ref: values
+          targetRevision: main
+      destination:
+        server: '{{server}}'
+        namespace: k8scc
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
