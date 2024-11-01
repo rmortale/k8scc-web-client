@@ -6,8 +6,8 @@ containerPort: 8080
 secretEnabled: false
 
 vars:
-  SPRING_PROFILES_ACTIVE: test
-  K8SCC_ENV: TEST
+  SPRING_PROFILES_ACTIVE: dev
+  K8SCC_ENV: DEVT
 
 resources:
   limits:
