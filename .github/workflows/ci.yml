@@ -63,7 +63,8 @@ jobs:
           git checkout main
           echo "updating image tag in values file"
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k8scc-web-client-test-values.yaml
-          # sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/lke-values.yaml
+          sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k8scc-web-client-dev-values.yaml
+          sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k8scc-web-client-prod-values.yaml
           git add . && git commit -m "update image tag"
           
           git push --all origin
