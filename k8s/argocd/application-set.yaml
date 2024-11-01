@@ -8,7 +8,7 @@ spec:
     - clusters: { }
   template:
     metadata:
-      name: '{{name}}-k8scc-web-client'
+      name: 'k8scc-web-client-{{name}}'
       namespace: argocd
     spec:
       project: default
