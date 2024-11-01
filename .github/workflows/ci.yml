@@ -66,6 +66,7 @@ jobs:
           echo "checkout main branch"
           git checkout main
           echo "updating image tag in values file"
+          echo "new tag is: ${{ github.sha }}"
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/in-cluster-values.yaml
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k3d-dev-values.yaml
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k3d-ora-cluster-values.yaml
