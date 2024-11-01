@@ -1,0 +1,21 @@
+image:
+  repository: ghcr.io/rmortale/k8scc-web-client
+  tag: 770449e5be150d4adb6643b7695d227a1dac3634
+
+containerPort: 8080
+secretEnabled: false
+
+vars:
+  SPRING_PROFILES_ACTIVE: prod
+  K8SCC_ENV: PROD
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "1000Mi"
+  requests:
+    cpu: "200m"
+    memory: "500Mi"
+
+      
+
