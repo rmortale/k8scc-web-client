@@ -5,6 +5,9 @@ image:
 containerPort: 8080
 secretEnabled: false
 
+ingress:
+  host: k8scc.internal
+
 vars:
   SPRING_PROFILES_ACTIVE: test
   K8SCC_ENV: TEST
