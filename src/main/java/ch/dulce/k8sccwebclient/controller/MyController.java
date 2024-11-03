@@ -16,7 +16,7 @@ public class MyController {
   @Value("${app.prefix}")
   private String prefix;
 
-  @GetMapping("env")
+  @GetMapping()
   public ResponseEntity<?> greet() {
     return ResponseEntity.ok(prefix + greeting);
   }
