@@ -13,10 +13,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
+    permissions: write-all
 
     steps:
       - name: Check out the repo
