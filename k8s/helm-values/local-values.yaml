@@ -3,11 +3,6 @@ image:
   tag: 418cc8fdd9ba59c6ecb292770d70e15fc0937888
 
 containerPort: 8080
-secretEnabled: false
-
-vars:
-  SPRING_PROFILES_ACTIVE: dev
-  K8SCC_ENV: DEVT
 
 resources:
   limits:
@@ -16,6 +11,3 @@ resources:
   requests:
     cpu: "200m"
     memory: "500Mi"
-
-      
-
