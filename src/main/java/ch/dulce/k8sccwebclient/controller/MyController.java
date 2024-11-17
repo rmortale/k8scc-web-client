@@ -18,6 +18,6 @@ public class MyController {
 
   @GetMapping()
   public ResponseEntity<?> greet() {
-    return ResponseEntity.ok(prefix + greeting);
+    return ResponseEntity.ok(prefix + greeting + "-suffix");
   }
 }
