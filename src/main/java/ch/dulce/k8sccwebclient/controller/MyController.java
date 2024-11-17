@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/")
+@RequestMapping(path = "hello")
 @RestController()
 public class MyController {
 
@@ -18,6 +18,6 @@ public class MyController {
 
   @GetMapping()
   public ResponseEntity<?> greet() {
-    return ResponseEntity.ok(prefix + greeting);
+    return ResponseEntity.ok(prefix + greeting + "-suffix");
   }
 }

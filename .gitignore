@@ -32,3 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 /k8s/helm-values/secret.sh
+/src/main/resources/application-local.yaml
