@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8scc-web-client-acpt
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: k8scc-web-client-app
+spec:
+  project: default
+  destination:
+    name: k3d-acpt
+    namespace: k8scc
+  sources:
+    - chart: onechart
+      repoURL: https://chart.onechart.dev
+      targetRevision: 0.73.0
+      helm:
+        valueFiles:
+          - $values/k8s/helm-values/acpt-values.yaml
+
+    - repoURL: https://github.com/rmortale/k8scc-web-client.git
+      ref: values
+      targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
