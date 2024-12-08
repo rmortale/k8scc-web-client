@@ -62,6 +62,10 @@ jobs:
       - name: update tags in helm values files
         run: |
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/devt-values.yaml
+          if [ $GITHUB_REF_NAME == 'main' ]; then
+            echo "update acpt values"
+            sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/acpt-values.yaml
+          fi
 
       - uses: EndBug/add-and-commit@v7
         with:
