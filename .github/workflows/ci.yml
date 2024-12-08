@@ -61,6 +61,8 @@ jobs:
 
       - name: update tags in helm values files
         run: |
+          env
+          echo ${{ github.ref }}
           sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/devt-values.yaml
 
       - uses: EndBug/add-and-commit@v7
