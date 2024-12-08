@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/rmortale/k8scc-web-client
-  tag: 63cdf9a581d3144314fddc0fce1ecb2721c1a6b9
+  tag: 4a34f02332fa5734f883dce0bb80141062f3cad4
 
 container:
   imagePullPolicy: Always
