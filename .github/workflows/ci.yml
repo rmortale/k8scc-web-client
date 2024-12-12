@@ -65,6 +65,8 @@ jobs:
           if [ $GITHUB_REF_NAME == 'main' ]; then
             echo "update acpt values"
             sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/acpt-values.yaml
+            echo "update prod values"
+            sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/prod-values.yaml
           fi
 
       - uses: EndBug/add-and-commit@v7
