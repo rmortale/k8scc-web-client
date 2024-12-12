@@ -61,12 +61,12 @@ jobs:
 
       - name: update tags in helm values files
         run: |
-          sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/devt-values.yaml
+          sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k3d-devt-values.yaml
           if [ $GITHUB_REF_NAME == 'main' ]; then
+            echo "update test values"
+            sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k3d-test-values.yaml
             echo "update acpt values"
-            sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/acpt-values.yaml
-            echo "update prod values"
-            sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/prod-values.yaml
+            sed -i "s,tag:.*,tag:\ ${{ github.sha }}," k8s/helm-values/k3d-acpt-values.yaml
           fi
 
       - uses: EndBug/add-and-commit@v7

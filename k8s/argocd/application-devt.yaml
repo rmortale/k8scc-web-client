@@ -18,7 +18,7 @@ spec:
       targetRevision: 0.73.0
       helm:
         valueFiles:
-          - $values/k8s/helm-values/devt-values.yaml
+          - $values/k8s/helm-values/k3d-devt-values.yaml
 
     - repoURL: https://github.com/rmortale/k8scc-web-client.git
       ref: values

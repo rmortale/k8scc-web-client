@@ -5,11 +5,11 @@ image:
 containerPort: 8080
 
 vars:
-  SPRING_PROFILES_ACTIVE: prod
-  K8SCC_ENV: PROD
+  SPRING_PROFILES_ACTIVE: test
+  K8SCC_ENV: TEST
 
 ingress:
-  host: prod-k8scc.internal
+  host: test-k8scc.internal
 
 
 resources:
