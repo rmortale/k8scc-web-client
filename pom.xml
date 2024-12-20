@@ -53,15 +53,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <docker>
-                        <publishRegistry>
-                            <url>${docker.reg.url}</url>
-                            <username>${docker.reg.username}</username>
-                            <password>${docker.reg.password}</password>
-                        </publishRegistry>
-                    </docker>
-                </configuration>
             </plugin>
         </plugins>
     </build>
