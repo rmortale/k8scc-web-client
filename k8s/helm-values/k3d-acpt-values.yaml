@@ -5,7 +5,6 @@ image:
 containerPort: 8080
 
 vars:
-  SPRING_PROFILES_ACTIVE: acpt
   K8SCC_ENV: ACPT
 
 ingress:

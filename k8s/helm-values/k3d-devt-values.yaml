@@ -5,7 +5,6 @@ image:
 containerPort: 8080
 
 vars:
-  SPRING_PROFILES_ACTIVE: devt
   K8SCC_ENV: DEVT
 
 ingress:
