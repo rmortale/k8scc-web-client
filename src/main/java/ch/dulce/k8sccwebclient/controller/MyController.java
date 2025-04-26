@@ -13,11 +13,10 @@ public class MyController {
   @Value("${app.greeting}")
   private String greeting;
 
-  @Value("${app.prefix}")
-  private String prefix;
+  
 
   @GetMapping()
   public ResponseEntity<?> greet() {
-    return ResponseEntity.ok(prefix + greeting + "-suffix");
+    return ResponseEntity.ok("Hello from " + greeting);
   }
 }

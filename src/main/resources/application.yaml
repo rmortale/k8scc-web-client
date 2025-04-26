@@ -4,8 +4,7 @@ spring:
 
 logging:
   level:
-    org.springframework.boot.context.config: TRACE
+    org.springframework.boot.context.config: INFO
 
 app:
-  prefix: DEFAULT-
-  greeting: Hello from default env
+  greeting: default
