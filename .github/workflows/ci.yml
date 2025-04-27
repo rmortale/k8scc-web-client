@@ -30,7 +30,7 @@ jobs:
             type=sha,prefix={{branch}}-
             type=sha,prefix=
 
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v4
         with:
           java-version: '21'
