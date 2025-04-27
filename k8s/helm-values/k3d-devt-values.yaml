@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/rmortale/k8scc-web-client
-  tag: a2e576c
+  tag: db28b97
 
 containerPort: 8080
 
